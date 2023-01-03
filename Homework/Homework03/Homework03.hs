@@ -9,9 +9,6 @@ checkConsumption consumption time maxC
     where
         monthlyC = consumption * time * 30
 
--- The function has to take the hourly consumption of an electrical device, the hours of daily use, and the maximum monthly consumption allowed.
--- (Monthly usage = consumption (kW) * hours of daily use (h) * 30 days).
-
 
 -- Question 2
 -- Prelude:
