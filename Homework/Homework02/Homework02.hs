@@ -34,6 +34,7 @@
 -- Question 4
 
 -- Are there any functions in Haskell that let you transform one type to the other? Try googling for the answer.
+
 -- The show function can take any type and return a string.
 
 -- Question 5
