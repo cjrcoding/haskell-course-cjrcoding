@@ -1,6 +1,7 @@
 -- Question 1
 -- Write a function that checks if the monthly consumption of an electrical device is bigger, equal, or smaller than the maximum allowed and
 -- returns a message accordingly.
+{-# OPTIONS_GHC -Wno-overlapping-patterns #-}
 
 checkConsumption consumption time maxC
     | monthlyC > maxC = "Penguins are burning!"  
@@ -17,6 +18,12 @@ checkConsumption consumption time maxC
 
 -- In the previous function, return the excess/savings of consumption as part of the message.
 
+checkConsumption consumption time maxC
+    | monthlyC > maxC = "Penguins don't liek you: " ++ show (monthlyC - maxC) ++ "kWh per month!"
+    | monthlyC == maxC = "This is as far as you go!"
+    | otherwise = "You're saving: " ++ show (maxC - monthlyC) ++ "kWh per month! Good job!!"
+    where
+        monthlyC = consumption * time * 30
 
 -- Question 3
 -- Write a function that showcases the advantages of using let expressions to split a big expression into smaller ones.
