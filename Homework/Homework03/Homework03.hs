@@ -1,6 +1,14 @@
 -- Question 1
 -- Write a function that checks if the monthly consumption of an electrical device is bigger, equal, or smaller than the maximum allowed and
--- returns a message accordingly. 
+-- returns a message accordingly.
+
+checkConsumption consumption time maxC
+    | monthlyC > maxC = "Penguins are burning!"  
+    | monthlyC == maxC = "Stop Right there, you are ok!"
+    | otherwise = "we need more data!"
+    where
+        monthlyC = consumption * time * 30
+
 -- The function has to take the hourly consumption of an electrical device, the hours of daily use, and the maximum monthly consumption allowed.
 -- (Monthly usage = consumption (kW) * hours of daily use (h) * 30 days).
 
