@@ -42,6 +42,12 @@ bigExpression a =
 -- Return the number as a string, and in case the divisor is 0, return a message why the division is not
 -- possible. To implement this function using both guards and if-then-else statements.  
 
+guardsAndIf :: Double -> Double -> String
+guardsAndIf a b
+  | a < 0 && b < 0 = if (a < b) then show (b / a) else show (a / b)
+  | a > b = if a /= 0 then show (a/b) else "a is larger but 0"
+  | a < b = if b /= 0 then show (b/a) else "b is larger but 0"
+  | otherwise = if a /= 0 then "1" else "a and b are both 0"
 
 -- Question 5
 -- Write a function that takes in two numbers and calculates the sum of squares for the product and quotient
