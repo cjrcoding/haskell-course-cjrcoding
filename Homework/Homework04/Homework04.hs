@@ -15,6 +15,16 @@ findFour _ = 0
 -- removes them. Else, it does nothing. Do it two times, one with multiple function definitions and one with
 -- case expressions.
 
+remove3 :: [a] -> [a]
+remove3 (_:_:_:xs) = xs
+remove3 x          = x 
+
+remove3' :: [a] -> [a]
+remove3' list = case list of
+    (_:_:_:xs) -> xs
+    x          -> x
+
+
 
 -- Question 3
 -- Create a function that takes a 3-element tuple (all of type Integer) and adds them together
