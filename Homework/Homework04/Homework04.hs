@@ -17,7 +17,7 @@ findFour _ = 0
 
 remove3 :: [a] -> [a]
 remove3 (_:_:_:xs) = xs
-remove3 x          = x 
+remove3 x          = x
 
 remove3' :: [a] -> [a]
 remove3' list = case list of
@@ -36,7 +36,7 @@ add3 (x, y, z) = x + y + z
 -- Question 4
 -- Implement a function that returns True if a list is empty and False otherwise.
 
-    
+
 emptyList :: [a] -> Bool
 emptyList [] = True
 emptyList _  = False
@@ -56,3 +56,5 @@ tail' []      = []
 -- write a case expression wrapped in a function that takes an Int and adds one if it's even. Otherwise does nothing. 
 -- (Use the `even` function to check if the number is even.)
 
+addOneIfEven :: Int -> Int
+addOneIfEven n = if even n then n + 1 else n
