@@ -52,4 +52,10 @@ guardsAndIf a b
 -- Question 5
 -- Write a function that takes in two numbers and calculates the sum of squares for the product and quotient
 -- of those numbers. Write the function such that you use a where block inside a let expression and a
--- let expression inside a where block. 
+-- let expression inside a where block.
+
+invertCx :: Double -> Double -> Double
+invertCx a b = let sqrtProd = sqrt abProd where abProd = a * b
+               in sqrtProd + sqrtQuot
+               where sqrtQuot = let abQuot = a / b in sqrt abQuot
+
