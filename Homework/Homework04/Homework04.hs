@@ -5,6 +5,11 @@
 nested :: [([Int], [Int])]
 nested = [([1,2],[3,4]), ([5,6],[7,8])]
 
+findFour :: [([Int], [Int])] -> Int
+findFour [(_,[_,x]), _] = x
+findFour _ = 0
+
+
 -- Question 2
 -- Write a function that takes a list of elements of any type and, if the list has 3 or more elements, it
 -- removes them. Else, it does nothing. Do it two times, one with multiple function definitions and one with
