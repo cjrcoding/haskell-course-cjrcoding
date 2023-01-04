@@ -36,6 +36,12 @@ add3 (x, y, z) = x + y + z
 -- Question 4
 -- Implement a function that returns True if a list is empty and False otherwise.
 
+    
+emptyList :: [a] -> Bool
+emptyList [] = True
+emptyList _  = False
+
+
 
 -- Question 5
 -- Write the implementation of the tail function using pattern matching. But, instead of failing if
