@@ -6,7 +6,8 @@
 
 -- Create the `uncurry'` function that converts a curried function to a function on pairs. So this: `(+) 1 2` that returns `3` can be written as
 -- `uncurry' (+) (1,2)` (with the two different arguments inside a pair).
-
+    uncurry' :: (a -> b -> c) -> (a, b) -> c
+    uncurry' g (x, y) = g x y
 
 -- Create the `curry'` function that converts an uncurried function to a curried function. So this: `fst (1,2)` that returns `1` can be written as
 -- `curry' fst 1 2` (with the tuple converted into two different arguments).
