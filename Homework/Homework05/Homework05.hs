@@ -10,8 +10,9 @@
     uncurry' g (x, y) = g x y
 
 -- Create the `curry'` function that converts an uncurried function to a curried function. So this: `fst (1,2)` that returns `1` can be written as
--- `curry' fst 1 2` (with the tuple converted into two different arguments).
-
+-- `curry' fst 1 2` (with the tuple converted into two different arguments).    
+    curry' :: ((a, b) -> c) -> a -> b -> c
+    curry' f x y = f (x, y)
 
 -- Use higher-order functions, partial application, and point-free style to create a function that checks if a word has an uppercase letter.
 -- Start with using just higher-order functions and build from there. 
