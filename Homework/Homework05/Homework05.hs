@@ -17,6 +17,8 @@
 -- Use higher-order functions, partial application, and point-free style to create a function that checks if a word has an uppercase letter.
 -- Start with using just higher-order functions and build from there. 
 
+    hasUppercase :: String -> Bool
+    hasUppercase = any (`elem` ['A'..'Z'])
 
 -- Create the `count` function that takes a team ("Red", "Blue", or "Green") and returns the amount of votes the team has inside `votes`.
 
